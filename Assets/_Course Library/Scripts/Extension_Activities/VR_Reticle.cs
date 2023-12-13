@@ -23,7 +23,7 @@ public class VR_Reticle : MonoBehaviour
 
     void Scale()
     {
-        float scaleAmount = Mathf.Abs(Mathf.Sin(Time.time * _ScaleSpeed)) + 1;
+        float scaleAmount = Mathf.Abs(Mathf.Sin(Time.time * _ScaleSpeed)) + .5f;
         Vector3 scale =
             new Vector3(scaleAmount, scaleAmount, scaleAmount);
 

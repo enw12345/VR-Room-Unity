@@ -15,8 +15,10 @@ public class ToggleAudio : MonoBehaviour
         // Check if _audioSource is not null to avoid potential issues
         if (_audioSource != null)
         {
-            // Use the ternary operator to toggle between Pause and Play
-            _audioSource.isPlaying? _audioSource.Pause() : _audioSource.Play();
+            if (_audioSource.isPlaying)
+                _audioSource.Pause();
+            else
+                _audioSource.Play();
         }
         else
         {
